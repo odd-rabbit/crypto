@@ -40,7 +40,7 @@ class API(object):
             'end': end,
         }
         data = requests.get(url, params=params).json()
-        return pd.DataFrame(data).set_index('T')
+        return pd.DataFrame(data, index=list(range(len(data)))).set_index('T')
 
     def historical_price(self, pair, interval, start='', end=''):
         url = self.url + 'price/history'
