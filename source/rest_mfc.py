@@ -86,15 +86,15 @@ if __name__ == '__main__':
     import time
 
     # API().price('bitcoin').to_csv('tickers.csv')
-    API().tickers(['BTC_USDT']).to_csv('tickers.csv')
-    # API().kline('BTC_USDT', '1m').to_csv('kline.csv')
+    # API().tickers(['BTC_USDT']).to_csv('tickers.csv')
+    API().kline('BTC_USDT', '1m').to_csv('kline.csv')
     # API().orderbook('BTC_USDT', 100).to_csv('book.csv')
     # API().trades('BTC_USDT', 100).to_csv('trade.csv')
     for i in range(5):
         time.sleep(1)
         # API().price('bitcoin').to_csv('price.csv', mode='a', header=False)
-        API().tickers(['BTC_USDT']).to_csv('tickers.csv', mode='a', header=False)
-        # API().kline('BTC_USDT', '1m').to_csv('kline.csv', mode='a', header=False)
+        # API().tickers(['BTC_USDT']).to_csv('tickers.csv', mode='a', header=False)
+        API().kline('BTC_USDT', '1m').to_csv('kline.csv', mode='a', header=False)
         # API().trades('BTC_USDT', 100).to_csv('trade.csv', mode='a', header=False)
         # API().orderbook('BTC_USDT', 100).to_csv('book.csv', mode='a', header=False)
         print(i)
